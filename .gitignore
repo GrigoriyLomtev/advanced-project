@@ -1,0 +1,8 @@
+# dump
+/dump
+
+# dependencies
+/node_modules
+
+# production
+/build
