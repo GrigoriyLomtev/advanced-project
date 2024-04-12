@@ -11,7 +11,6 @@ export function NavBar(props: NavBarProps) {
   const { className } = props;
   return (
     <div className={classNames(styles.block)}>
-      <ThemeSwitcher className={styles.themeSwitcher} />
       <div className={styles.navLinks}>
         <AppLink variant={AppLinkVariant.INVERTED} to={"/"}>
           main
