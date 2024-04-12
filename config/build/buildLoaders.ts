@@ -3,13 +3,20 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BuildOptions } from "./types/config";
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
-  const tsLoader = {
-    test: /\.tsx?$/,
-    use: "ts-loader",
-    exclude: /node_modules/,
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif)$/i,
+    use: [
+      {
+        loader: "file-loader",
+      },
+    ],
+  };
+
+  const svgLoader = {
+    test: /\.svg$/,
+    use: ["@svgr/webpack"],
   };
   const cssLoader = {
-    // test: /\.s[ac]ss$/i,
     test: /\.s?[ac]ss$/i, // допускаем css и scss
     use: [
       isDev ? "style-loader" : MiniCssExtractPlugin.loader,
@@ -28,5 +35,11 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
       "sass-loader",
     ],
   };
-  return [tsLoader, cssLoader];
+  const tsLoader = {
+    test: /\.tsx?$/,
+    use: "ts-loader",
+    exclude: /node_modules/,
+  };
+
+  return [fileLoader, svgLoader, tsLoader, cssLoader];
 }

@@ -1,0 +1,18 @@
+.block {
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--inverted-bg-color);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.navLinks {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.themeSwitcher {
+  margin-left: 110px;
+}

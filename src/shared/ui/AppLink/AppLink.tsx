@@ -1,0 +1,35 @@
+import { classNames } from "shared/lib/classNames/classNames";
+import styles from "./AppLink.module.scss";
+import { ReactNode } from "react";
+import { Link, LinkProps } from "react-router-dom";
+
+export enum AppLinkVariant {
+  PRIMARY = "primary",
+  INVERTED = "inverted",
+}
+
+interface AppLinkProps extends LinkProps {
+  className?: string;
+  children?: ReactNode;
+  variant?: AppLinkVariant;
+}
+
+export function AppLink(props: AppLinkProps) {
+  const {
+    children,
+    variant = AppLinkVariant.PRIMARY,
+    to,
+    className,
+    ...otherProps
+  } = props;
+
+  return (
+    <Link
+      {...otherProps}
+      to={to}
+      className={classNames(styles.block, {}, [className, styles[variant]])}
+    >
+      {children}
+    </Link>
+  );
+}
