@@ -1,10 +1,9 @@
-interface IMainPage {}
+import { useTranslation } from "react-i18next";
 
-export default function MainPage(props: IMainPage) {
-  return (
-    <div>
-      MainPage
-      <input type="text" />
-    </div>
-  );
+interface MainPageProps {}
+
+export default function MainPage(props: MainPageProps) {
+  const { t } = useTranslation();
+
+  return <div>{t("MainPage")}</div>;
 }
