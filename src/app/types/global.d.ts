@@ -1,12 +1,12 @@
 // styles
-declare module "*.module.css" {
+declare module '*.module.css' {
   interface IClassNames {
     [className: string]: string;
   }
   const classNames: IClassNames;
   export = classNames;
 }
-declare module "*.module.scss" {
+declare module '*.module.scss' {
   interface IClassNames {
     [className: string]: string;
   }
@@ -14,12 +14,13 @@ declare module "*.module.scss" {
   export = classNames;
 }
 // media
-declare module "*.svg" {
+declare module '*.png';
+declare module '*.jpg';
+declare module '*.jpeg';
+declare module '*.svg' {
+  import React from 'react';
+
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
-  export default content;
-}
-declare module "*.png" {
-  const content: string;
   export default content;
 }
 

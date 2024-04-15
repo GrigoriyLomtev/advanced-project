@@ -1,11 +1,11 @@
-import { classNames } from "shared/lib/classNames/classNames";
-import styles from "./AppLink.module.scss";
-import { ReactNode } from "react";
-import { Link, LinkProps } from "react-router-dom";
+import { classNames } from 'shared/lib/classNames/classNames';
+import { ReactNode } from 'react';
+import { Link, LinkProps } from 'react-router-dom';
+import styles from './AppLink.module.scss';
 
 export enum AppLinkVariant {
-  PRIMARY = "primary",
-  INVERTED = "inverted",
+  PRIMARY = 'primary',
+  INVERTED = 'inverted',
 }
 
 interface AppLinkProps extends LinkProps {

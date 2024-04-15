@@ -1,7 +1,7 @@
-import { useTranslation } from "react-i18next";
-import styles from "./LangSwitcher.module.scss";
-import { Button, VariantButton } from "../Button/Button";
-import { classNames } from "shared/lib/classNames/classNames";
+import { useTranslation } from 'react-i18next';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Button, VariantButton } from 'shared/ui/Button/Button';
+import styles from './LangSwitcher.module.scss';
 
 interface LangSwitcherProps {
   className?: string;
@@ -12,7 +12,7 @@ export function LangSwitcher(props: LangSwitcherProps) {
   const { t, i18n } = useTranslation();
 
   const toggle = () => {
-    i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
+    i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
   };
 
   return (
@@ -21,7 +21,7 @@ export function LangSwitcher(props: LangSwitcherProps) {
       className={classNames(styles.block, {}, [className])}
       onClick={toggle}
     >
-      {t("Language")}
+      {t('Language')}
     </Button>
   );
 }
