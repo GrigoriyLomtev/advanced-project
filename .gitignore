@@ -7,8 +7,6 @@
 # production
 /build
 
-/.vscode/
-.vscode/
 /.vscode
 .vscode
 .idea

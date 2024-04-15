@@ -1,12 +1,11 @@
 .block {
   height: calc(100vh - var(--navbar-height));
   width: var(--sidebar-width);
-
   background: var(--inverted-bg-color);
   position: relative;
-
   transition: width 0.2s ease-in-out;
 }
+
 .collapsed {
   width: var(--sidebar-width-collapsed);
 }
@@ -19,6 +18,7 @@
   justify-content: center;
   width: 100%;
 }
+
 .langSwitcher {
   margin-left: 20px;
 }
