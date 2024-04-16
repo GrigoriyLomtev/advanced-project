@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkVariant } from 'shared/ui/AppLink/AppLink';
-import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
+import { useTranslation } from 'react-i18next';
 import styles from './NavBar.module.scss';
 
 interface NavBarProps {
@@ -9,14 +9,15 @@ interface NavBarProps {
 
 export function NavBar(props: NavBarProps) {
   const { className } = props;
+  const { t } = useTranslation();
   return (
-    <div className={classNames(styles.block)}>
+    <div className={classNames(styles.block, {}, [className])}>
       <div className={styles.navLinks}>
         <AppLink variant={AppLinkVariant.INVERTED} to="/">
-          main
+          {t('MainPage')}
         </AppLink>
         <AppLink variant={AppLinkVariant.INVERTED} to="/about">
-          about
+          {t('AboutPage')}
         </AppLink>
       </div>
     </div>
