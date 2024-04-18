@@ -6,5 +6,8 @@
     "toMainPage": "Main Page",
     "toAboutPage": "About us"
   },
-  "PageNotFound": "Page Not Found"
+  "PageNotFound": "Page Not Found",
+  "PageError": "Something went wrong.",
+  "RefreshPage": "Refresh the page",
+  "ThrowError": "An unexpected error has occurred"
 }
