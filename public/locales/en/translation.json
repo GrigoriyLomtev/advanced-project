@@ -9,5 +9,5 @@
   "PageNotFound": "Page Not Found",
   "PageError": "Something went wrong.",
   "RefreshPage": "Refresh the page",
-  "ThrowError": "An unexpected error has occurred"
+  "ThrowError": "throw error"
 }
