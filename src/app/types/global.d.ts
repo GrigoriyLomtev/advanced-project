@@ -14,6 +14,7 @@ declare module '*.module.scss' {
   export = classNames;
 }
 // media
+declare module '*.gif';
 declare module '*.png';
 declare module '*.jpg';
 declare module '*.jpeg';

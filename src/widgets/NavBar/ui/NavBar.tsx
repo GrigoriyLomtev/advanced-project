@@ -14,10 +14,10 @@ export function NavBar(props: NavBarProps) {
     <div className={classNames(styles.block, {}, [className])}>
       <div className={styles.navLinks}>
         <AppLink variant={AppLinkVariant.INVERTED} to="/">
-          {t('MainPage')}
+          {t('navBar.toMainPage')}
         </AppLink>
         <AppLink variant={AppLinkVariant.INVERTED} to="/about">
-          {t('AboutPage')}
+          {t('navBar.toAboutPage')}
         </AppLink>
       </div>
     </div>

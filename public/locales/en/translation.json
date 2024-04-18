@@ -1,5 +1,10 @@
 {
   "Language": "English",
   "MainPage": "Main Page",
-  "toggle": "toggle"
+  "toggle": "toggle",
+  "navBar": {
+    "toMainPage": "Main Page",
+    "toAboutPage": "About us"
+  },
+  "PageNotFound": "Page Not Found"
 }

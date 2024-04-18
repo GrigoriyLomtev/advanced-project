@@ -5,5 +5,9 @@ interface MainPageProps {}
 export default function MainPage(props: MainPageProps) {
   const { t } = useTranslation();
 
-  return <div>{t('MainPage')}</div>;
+  return (
+    <div>
+      {t('MainPage')}
+    </div>
+  );
 }

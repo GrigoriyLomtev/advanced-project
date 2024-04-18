@@ -1,5 +1,10 @@
 {
   "Language": "Русский",
   "MainPage": "Главная страница",
-  "toggle": "переключить"
+  "toggle": "переключить",
+  "navBar": {
+    "toMainPage": "Главная страница",
+    "toAboutPage": "О нас"
+  },
+  "PageNotFound": "Страница не найдена"
 }
