@@ -42,10 +42,11 @@ jobs:
 
       - name: Build the storybook
         run: npm run storybook:build
+        
+      - name: Wait for Storybook to launch
+        run: sleep 10 # Adjust as needed to ensure Storybook has started
 
       - name: Run screenshot testing
-        services:
-        - docker
         run: npm run test:ui:ci
       # - name: Start Storybook
       #   run: npm run storybook &
