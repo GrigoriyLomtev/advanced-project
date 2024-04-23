@@ -8,7 +8,7 @@ interface LoaderProps {
 export function Loader(props: LoaderProps) {
   const { className } = props;
 
-  const isPapich = true;
+  const isPapich = false;
   const loader = isPapich
     ? <img className={styles.papichLoader} src={Papich} alt="" />
     : (
