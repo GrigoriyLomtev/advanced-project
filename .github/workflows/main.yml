@@ -44,6 +44,8 @@ jobs:
         run: npm run storybook:build
 
       - name: Run screenshot testing
+        services:
+        - docker
         run: npm run test:ui:ci
       # - name: Start Storybook
       #   run: npm run storybook &
