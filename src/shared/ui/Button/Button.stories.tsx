@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import { Button, VariantButton } from './Button';
 import ThemeDecorator from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { Button, VariantButton } from './Button';
 
 const meta = {
   title: 'shared/Button',
@@ -12,7 +12,7 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-   
+
   },
   args: { onClick: fn() },
 } satisfies Meta<typeof Button>;
@@ -48,8 +48,6 @@ export const OutlineBtnDark: Story = {
     onClick: fn(),
   },
   decorators: [
-    ThemeDecorator(Theme.DARK)
-  ] 
+    ThemeDecorator(Theme.DARK),
+  ],
 };
-
-

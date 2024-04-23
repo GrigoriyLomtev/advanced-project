@@ -1,7 +1,7 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export function buildCssLoaders(isDev:boolean) {
-  return  {
+  return {
     test: /\.s?[ac]ss$/i, // допускаем css и scss
     use: [
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,

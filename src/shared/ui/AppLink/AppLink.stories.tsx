@@ -11,7 +11,7 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {},
-  args: { onClick: fn(), to:'/' },
+  args: { onClick: fn(), to: '/' },
 } satisfies Meta<typeof AppLink>;
 
 export default meta;
@@ -35,16 +35,16 @@ export const PrimaryDark: Story = {
     children: 'AppLinkDark Text Primary',
     variant: AppLinkVariant.PRIMARY,
   },
-    decorators: [
-    ThemeDecorator(Theme.DARK)
-  ] 
+  decorators: [
+    ThemeDecorator(Theme.DARK),
+  ],
 };
 export const SecondaryDark: Story = {
   args: {
     children: 'AppLinkDark Text Secondary',
     variant: AppLinkVariant.INVERTED,
   },
-    decorators: [
-    ThemeDecorator(Theme.DARK)
-  ] 
+  decorators: [
+    ThemeDecorator(Theme.DARK),
+  ],
 };

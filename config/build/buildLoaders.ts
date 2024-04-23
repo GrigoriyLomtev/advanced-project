@@ -27,7 +27,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     test: /\.svg$/,
     use: ['@svgr/webpack'],
   };
-  const cssLoader = buildCssLoaders(isDev)
+  const cssLoader = buildCssLoaders(isDev);
   const tsLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
