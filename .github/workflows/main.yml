@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Force install Loki
+        run: npm install loki --force
+
       - name: Build the project for production
         run: npm run build:prod
         
