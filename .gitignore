@@ -11,3 +11,4 @@
 .vscode
 .idea
 *storybook.log
+/storybook-static
