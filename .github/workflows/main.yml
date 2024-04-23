@@ -21,11 +21,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Force install Loki
-        run: npm install loki --force
+      # - name: Install dependencies
+      #   run: npm install
+      - name: Install dependencies without Loki
+        run: npm install --no-optional
 
-      - name: Install dependencies
-        run: npm install
+      - name: Force install Loki
+        run: npm install loki --save-optional --force
 
       - name: Build the project for production
         run: npm run build:prod
