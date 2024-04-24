@@ -32,16 +32,20 @@ jobs:
 
       - name: Build the project for production
         run: npm run build:prod
-        
+
+        if: always()
       - name: Lint TypeScript files
         run: npm run lint:ts
 
+        if: always()
       - name: Lint SCSS files
         run: npm run lint:scss
 
+        if: always()
       - name: Run unit tests
         run: npm run test:unit
 
+        if: always()
       - name: Build the storybook
         run: npm run storybook:build
 
