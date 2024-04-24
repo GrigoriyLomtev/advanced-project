@@ -9,5 +9,6 @@
   "PageNotFound": "Page Not Found",
   "PageError": "Something went wrong.",
   "RefreshPage": "Refresh the page",
-  "ThrowError": "throw error"
+  "ThrowError": "throw error",
+  "ShortLanguage": "En"
 }

@@ -29,7 +29,11 @@ module.exports = {
     'no-trailing-spaces': 'warn',
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
-    'no-unused-vars': 'warn',
+
+    // 'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['warn'],
+
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'warn',
@@ -42,7 +46,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'i18next/no-literal-string': [
       'error',
-      { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },
+      { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'fill'] },
     ],
     'max-len': ['error', { code: 100, ignoreComments: true }],
   },

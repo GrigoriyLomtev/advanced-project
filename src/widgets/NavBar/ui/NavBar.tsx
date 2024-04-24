@@ -13,12 +13,12 @@ export function NavBar(props: NavBarProps) {
   return (
     <div className={classNames(styles.block, {}, [className])}>
       <div className={styles.navLinks}>
-        <AppLink variant={AppLinkVariant.INVERTED} to="/">
+        {/* <AppLink variant={AppLinkVariant.INVERTED} to="/">
           {t('navBar.toMainPage')}
         </AppLink>
         <AppLink variant={AppLinkVariant.INVERTED} to="/about">
           {t('navBar.toAboutPage')}
-        </AppLink>
+        </AppLink> */}
       </div>
     </div>
   );

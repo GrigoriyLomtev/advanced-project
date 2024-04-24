@@ -7,6 +7,7 @@ on:
     branches: [ master ]
 jobs:
   pipeline:
+    # запускаем на  windows-2019 т.к. иначе скриншот тесты с loki падают
     runs-on: windows-2019
     # runs-on: ubuntu-latest
     strategy:
@@ -44,21 +45,8 @@ jobs:
       - name: Build the storybook
         run: npm run storybook:build
 
-      - name: Wait for Storybook to launch
-        run: sleep 10 # Adjust as needed to ensure Storybook has started
-
-      - name: Run screenshot testing
-        run: npm run test:ui:ci
-      # - name: Start Storybook
-      #   run: npm run storybook &
-      #   shell: bash
-
       # - name: Wait for Storybook to launch
       #   run: sleep 10 # Adjust as needed to ensure Storybook has started
 
-      # - name: Run visual UI tests with Loki
-      #   run: npm run test:ui
-
-      # - name: Approve Loki changes
-      #   if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-      #   run: npm run test:ui:ok
+      - name: Run screenshot testing
+        run: npm run test:ui:ci

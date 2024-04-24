@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 import ThemeDecorator from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Button, VariantButton } from './Button';
+import { Button, ButtonSize, ButtonVariant } from './Button';
 
 const meta = {
   title: 'shared/Button',
@@ -23,31 +23,94 @@ type Story = StoryObj<typeof meta>;
 
 export const PrimaryBtn: Story = {
   args: {
-    children: 'Button Text PrimaryBtn',
+    children: 'PrimaryBtn',
     onClick: fn(),
   },
 };
+
 export const ClearBtn: Story = {
   args: {
-    children: 'Button Text ClearBtn',
-    variant: VariantButton.CLEAR,
+    children: 'ClearBtn',
+    variant: ButtonVariant.CLEAR,
     onClick: fn(),
   },
 };
-export const OutlineBtn: Story = {
+
+export const Outline: Story = {
   args: {
-    children: 'Button Text OutlineBtn',
-    variant: VariantButton.OUTLINE,
-    onClick: fn(),
+    children: 'Outline',
+    variant: ButtonVariant.OUTLINE,
   },
 };
-export const OutlineBtnDark: Story = {
+export const OutlineSizeM: Story = {
   args: {
-    children: 'Button Text OutlineBtnDark',
-    variant: VariantButton.OUTLINE,
-    onClick: fn(),
+    children: 'OutlineM',
+    variant: ButtonVariant.OUTLINE,
+    size: ButtonSize.M,
+  },
+};
+export const OutlineSizeL: Story = {
+  args: {
+    children: 'OutlineL',
+    variant: ButtonVariant.OUTLINE,
+    size: ButtonSize.L,
+  },
+};
+export const OutlineSizeXL: Story = {
+  args: {
+    children: 'OutlineXL',
+    variant: ButtonVariant.OUTLINE,
+    size: ButtonSize.XL,
+  },
+};
+
+export const OutlineDark: Story = {
+  args: {
+    children: 'OutlineDark',
+    variant: ButtonVariant.OUTLINE,
   },
   decorators: [
     ThemeDecorator(Theme.DARK),
   ],
+};
+
+export const BackgroundBtn: Story = {
+  args: {
+    children: 'BackgroundBtn',
+    variant: ButtonVariant.BACKGROUND,
+  },
+};
+
+export const BackgroundInvertedBtn: Story = {
+  args: {
+    children: 'BackgroundInvertedBtn',
+    variant: ButtonVariant.BACKGROUND_INVERTED,
+  },
+};
+
+export const SquareSizeM: Story = {
+  args: {
+    children: '>',
+    variant: ButtonVariant.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.M,
+  },
+};
+
+export const SquareSizeL: Story = {
+  args: {
+    children: '>',
+    variant: ButtonVariant.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.L,
+  },
+};
+
+export const SquareSizeXL: Story = {
+  args: {
+    children: '>',
+    variant: ButtonVariant.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.XL,
+  },
 };

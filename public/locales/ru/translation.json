@@ -9,5 +9,6 @@
   "PageNotFound": "Страница не найдена",
   "PageError": "Что-то пошло не так.",
   "RefreshPage": "Обновить страницу",
-  "ThrowError": "вызвать ошибку"
+  "ThrowError": "вызвать ошибку",
+  "ShortLanguage": "Ru"
 }
