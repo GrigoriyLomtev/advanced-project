@@ -10,5 +10,6 @@
   "PageError": "Something went wrong.",
   "RefreshPage": "Refresh the page",
   "ThrowError": "throw error",
-  "ShortLanguage": "En"
+  "ShortLanguage": "En",
+  "login": "Login"
 }

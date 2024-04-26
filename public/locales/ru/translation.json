@@ -10,5 +10,6 @@
   "PageError": "Что-то пошло не так.",
   "RefreshPage": "Обновить страницу",
   "ThrowError": "вызвать ошибку",
-  "ShortLanguage": "Ru"
+  "ShortLanguage": "Ru",
+  "login": "Войти"
 }

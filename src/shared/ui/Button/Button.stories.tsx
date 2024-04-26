@@ -32,7 +32,12 @@ export const ClearBtn: Story = {
   args: {
     children: 'ClearBtn',
     variant: ButtonVariant.CLEAR,
-    onClick: fn(),
+  },
+};
+export const ClearInvertedBtn: Story = {
+  args: {
+    children: 'ClearInvertedBtn',
+    variant: ButtonVariant.CLEAR_INVERTED,
   },
 };
 
