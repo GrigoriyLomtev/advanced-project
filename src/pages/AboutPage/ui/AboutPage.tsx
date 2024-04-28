@@ -6,5 +6,9 @@ interface IAboutPage {}
 export default function AboutPage(props: IAboutPage) {
   const { t } = useTranslation('about');
 
-  return <div>{t('AboutPage')}</div>;
+  return (
+    <div>
+      {t('AboutPage')}
+    </div>
+  );
 }
