@@ -11,5 +11,8 @@
   "RefreshPage": "Обновить страницу",
   "ThrowError": "вызвать ошибку",
   "ShortLanguage": "Ru",
-  "login": "Войти"
+  "login": "Войти",
+  "EnterText": "Введите текст",
+  "enterUsername": "Введите имя пользователя",
+  "enterPassword": "Введите пароль"
 }

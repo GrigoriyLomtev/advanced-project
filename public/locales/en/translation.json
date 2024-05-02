@@ -11,5 +11,8 @@
   "RefreshPage": "Refresh the page",
   "ThrowError": "throw error",
   "ShortLanguage": "En",
-  "login": "Login"
+  "login": "Login",
+  "EnterText": "Enter text",
+  "enterUsername": "Enter username",
+  "enterPassword": "Enter password"
 }
