@@ -12,7 +12,7 @@ interface ThemeProviderProps {
   children: ReactNode
 }
 
-export function ThemeProvider(props: ThemeProviderProps) {
+export const ThemeProvider = (props: ThemeProviderProps) => {
   const { children, initialTheme } = props;
   const [theme, setTheme] = useState<Theme>(initialTheme || defaultTheme);
 
@@ -29,4 +29,4 @@ export function ThemeProvider(props: ThemeProviderProps) {
       {children}
     </ThemeContext.Provider>
   );
-}
+};

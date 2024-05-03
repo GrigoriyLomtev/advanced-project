@@ -39,8 +39,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'warn',
     'linebreak-style': 'off',
-    // 'linebreak-style': ['error', 'windows'],
-    // 'linebreak-style': ['error', 'unix'],
+    'no-console': 'off',
     'no-shadow': 'off',
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
@@ -49,12 +48,19 @@ module.exports = {
       'warn',
       { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'fill'] },
     ],
-    'max-len': ['error', { code: 100, ignoreComments: true }],
+    'max-len': ['error', { code: 120, ignoreComments: true }],
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
     'no-param-reassign': 'off',
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: 'arrow-function',
+      },
+    ],
+
   },
   globals: {
     __IS_DEV__: true,

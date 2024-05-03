@@ -14,7 +14,7 @@ interface AppLinkProps extends LinkProps {
   variant?: AppLinkVariant;
 }
 
-export function AppLink(props: AppLinkProps) {
+export const AppLink = (props: AppLinkProps) => {
   const {
     children,
     variant = AppLinkVariant.PRIMARY,
@@ -32,4 +32,4 @@ export function AppLink(props: AppLinkProps) {
       {children}
     </Link>
   );
-}
+};

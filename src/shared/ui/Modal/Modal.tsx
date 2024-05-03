@@ -16,7 +16,7 @@ interface ModalProps {
 
 const ANIMATION_DELAY = 300;
 
-export function Modal(props: ModalProps) {
+export const Modal = (props: ModalProps) => {
   const {
     className, children, isOpen, onClose, lazy,
   } = props;
@@ -51,6 +51,7 @@ export function Modal(props: ModalProps) {
   // useEffect(() => {
   //   if (isOpen) setIsMounted(true);
   // }, [isOpen]);
+  // добавляем таймаут для срабатывания анимации открытия модалки
   useEffect(() => {
     if (isOpen) {
       setIsMounted(true);
@@ -98,4 +99,4 @@ export function Modal(props: ModalProps) {
       </div>
     </Portal>
   );
-}
+};

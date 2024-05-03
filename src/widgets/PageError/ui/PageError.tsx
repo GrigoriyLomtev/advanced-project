@@ -7,7 +7,7 @@ interface PageErrorProps {
   className?:string
 }
 
-export function PageError(props: PageErrorProps) {
+export const PageError = (props: PageErrorProps) => {
   const { className } = props;
 
   const { t } = useTranslation();
@@ -26,4 +26,4 @@ export function PageError(props: PageErrorProps) {
       </Button>
     </div>
   );
-}
+};

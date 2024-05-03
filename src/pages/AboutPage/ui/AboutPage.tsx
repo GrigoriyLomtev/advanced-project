@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 interface IAboutPage {}
 
-export default function AboutPage(props: IAboutPage) {
+const AboutPage = (props: IAboutPage) => {
   const { t } = useTranslation('about');
 
   return (
@@ -11,4 +11,6 @@ export default function AboutPage(props: IAboutPage) {
       {t('AboutPage')}
     </div>
   );
-}
+};
+
+export default AboutPage;

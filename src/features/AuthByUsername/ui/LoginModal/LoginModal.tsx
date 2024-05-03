@@ -6,7 +6,7 @@ interface LoginModalProps {
   onClose: () => void
 }
 
-export function LoginModal(props: LoginModalProps) {
+export const LoginModal = (props: LoginModalProps) => {
   const {
     isOpen, onClose,
   } = props;
@@ -20,4 +20,4 @@ export function LoginModal(props: LoginModalProps) {
       <LoginForm />
     </Modal>
   );
-}
+};

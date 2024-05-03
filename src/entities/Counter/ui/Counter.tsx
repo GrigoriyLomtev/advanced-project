@@ -3,7 +3,7 @@ import { Button } from 'shared/ui/Button/Button';
 import { counterActions } from '../model/slice/counterSlice';
 import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
 
-export function Counter() {
+export const Counter = () => {
   const dispatch = useDispatch();
   const counterValue = useSelector(getCounterValue);
 
@@ -23,4 +23,4 @@ export function Counter() {
       <Button data-testid="decrement-btn" onClick={decrement}>decrement</Button>
     </div>
   );
-}
+};

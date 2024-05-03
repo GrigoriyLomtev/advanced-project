@@ -21,24 +21,28 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   square?: boolean
   size?: ButtonSize
+  disabled?: boolean
 }
 
-export function Button(props: ButtonProps) {
+export const Button = (props: ButtonProps) => {
   const {
     className,
     children,
     variant,
     square,
     size = ButtonSize.M,
+    disabled,
     ...otherProps
   } = props;
 
   const mods: Record<string, boolean> = {
     [styles.square]: square,
+    [styles.disabled]: disabled,
   };
 
   return (
     <button
+      disabled={disabled}
       type="button"
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...otherProps}
@@ -47,4 +51,4 @@ export function Button(props: ButtonProps) {
       {children}
     </button>
   );
-}
+};

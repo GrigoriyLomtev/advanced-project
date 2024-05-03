@@ -11,9 +11,7 @@ const meta = {
     // layout: 'centered',
   },
   tags: ['autodocs'],
-  argTypes: {
-
-  },
+  argTypes: {},
   args: { onClick: fn() },
 } satisfies Meta<typeof Button>;
 
@@ -25,6 +23,14 @@ export const PrimaryBtn: Story = {
   args: {
     children: 'PrimaryBtn',
     onClick: fn(),
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    children: 'PrimaryBtnDisabled',
+    disabled: true,
+    variant: ButtonVariant.OUTLINE,
   },
 };
 
