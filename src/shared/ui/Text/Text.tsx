@@ -1,5 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
+import { memo } from 'react';
 import styles from './Text.module.scss';
 
 export enum TextVariant {
@@ -14,7 +15,7 @@ interface TextProps {
   variant?: TextVariant
 }
 
-export const Text = (props: TextProps) => {
+export const Text = memo((props: TextProps) => {
   const {
     className, text, title, variant = TextVariant.PRIMARY,
   } = props;
@@ -26,4 +27,4 @@ export const Text = (props: TextProps) => {
       {text && <p className={styles.text}>{text}</p>}
     </div>
   );
-};
+});

@@ -4,6 +4,7 @@
   "toggle": "переключить",
   "navBar": {
     "toMainPage": "Главная страница",
+    "toProfilePage": "Профиль",
     "toAboutPage": "О нас"
   },
   "PageNotFound": "Страница не найдена",
@@ -17,5 +18,6 @@
   "enterPassword": "Введите пароль",
   "authForm": "Форма авторизации",
   "invalidUserAuth": "Неверное имя пользователя или пароль",
-  "logout": "Выйти"
+  "logout": "Выйти",
+  "ProfilePage": "Страница профиля"
 }

@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { ReactNode } from 'react';
+import { ReactNode, memo } from 'react';
 import { Link, LinkProps } from 'react-router-dom';
 import styles from './AppLink.module.scss';
 
@@ -14,7 +14,7 @@ interface AppLinkProps extends LinkProps {
   variant?: AppLinkVariant;
 }
 
-export const AppLink = (props: AppLinkProps) => {
+export const AppLink = memo((props: AppLinkProps) => {
   const {
     children,
     variant = AppLinkVariant.PRIMARY,
@@ -25,6 +25,7 @@ export const AppLink = (props: AppLinkProps) => {
 
   return (
     <Link
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...otherProps}
       to={to}
       className={classNames(styles.block, {}, [className, styles[variant]])}
@@ -32,4 +33,4 @@ export const AppLink = (props: AppLinkProps) => {
       {children}
     </Link>
   );
-};
+});

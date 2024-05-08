@@ -10,7 +10,11 @@ const meta = {
   parameters: {},
   tags: ['autodocs'],
   argTypes: {},
-  args: {},
+  args: {
+    onSuccess() {
+      return null;
+    },
+  },
 } satisfies Meta<typeof LoginForm>;
 
 export default meta;

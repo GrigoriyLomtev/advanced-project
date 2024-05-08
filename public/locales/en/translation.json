@@ -4,6 +4,7 @@
   "toggle": "toggle",
   "navBar": {
     "toMainPage": "Main Page",
+    "toProfilePage": "Profile",
     "toAboutPage": "About us"
   },
   "PageNotFound": "Page Not Found",
@@ -17,5 +18,6 @@
   "enterPassword": "Enter password",
   "authForm": "Auth form",
   "invalidUserAuth": "Invalid username or password",
-  "logout": "Log out"
+  "logout": "Log out",
+  "ProfilePage": "Profile page"
 }
