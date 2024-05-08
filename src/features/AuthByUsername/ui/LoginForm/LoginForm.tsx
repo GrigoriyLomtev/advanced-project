@@ -48,8 +48,6 @@ const LoginForm = memo((props: LoginFormProps) => {
     <DynamicModuleLoader
       removeAfterUnmount
       reducers={initialReducers}
-      // name="loginForm"
-      // reducer={loginReducer}
     >
       <div className={classNames(styles.block, {}, [className])}>
         <Text title={t('authForm')} />
