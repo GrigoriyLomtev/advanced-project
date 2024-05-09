@@ -106,6 +106,7 @@
     "reg-cli": "^0.18.1"
   },
   "loki": {
+    "fetchFailIgnore": ".*",
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.app",

@@ -14,7 +14,6 @@ export const loginByUsername = createAsyncThunk<User, loginByUsernameProps, Thun
     const { dispatch, extra, rejectWithValue } = thunkAPI;
 
     try {
-      // const response = await axios.post<User>('http://localhost:8000/login', authData);
       const response = await extra.api.post<User>('/login', authData);
 
       if (!response.data) {
@@ -23,7 +22,7 @@ export const loginByUsername = createAsyncThunk<User, loginByUsernameProps, Thun
 
       localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
       dispatch(userActions.setAuthData(response.data));
-      extra.navigate('/about');
+      // extra.navigate?.('/about');
 
       return response.data;
     } catch (error) {

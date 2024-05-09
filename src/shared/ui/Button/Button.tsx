@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { ButtonHTMLAttributes, ReactNode, memo } from 'react';
 import styles from './Button.module.scss';
 
@@ -29,14 +29,14 @@ export const Button = memo((props: ButtonProps) => {
   const {
     className,
     children,
-    variant,
+    variant = ButtonVariant.OUTLINE,
     square,
     size = ButtonSize.M,
     disabled,
     ...otherProps
   } = props;
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [styles.square]: square,
     [styles.disabled]: disabled,
   };
