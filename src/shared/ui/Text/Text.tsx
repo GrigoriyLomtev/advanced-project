@@ -8,21 +8,33 @@ export enum TextVariant {
   ERROR = 'error'
 }
 
+export enum TextAlign {
+  RIGHT = 'right',
+  LEFT = 'left',
+  CENTER = 'center',
+}
+
 interface TextProps {
   className?: string
   title?:string
   text?: string
   variant?: TextVariant
+  align?: TextAlign
 }
 
 export const Text = memo((props: TextProps) => {
   const {
-    className, text, title, variant = TextVariant.PRIMARY,
+    className, text, title, variant = TextVariant.PRIMARY, align = TextAlign.LEFT,
   } = props;
   const { t } = useTranslation();
 
   return (
-    <div className={classNames(styles.block, { [styles[variant]]: true }, [className])}>
+    <div className={classNames(styles.block, {}, [
+      className,
+      styles[variant],
+      styles[align],
+    ])}
+    >
       {title && <p className={styles.title}>{title}</p>}
       {text && <p className={styles.text}>{text}</p>}
     </div>

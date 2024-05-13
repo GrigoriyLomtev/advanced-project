@@ -1,6 +1,15 @@
 {
   "Profile": "Профиль",
-  "Edit": "Редактировать",
   "YourFirstname": "Ваше имя",
-  "YourLastname": "Ваша фамилия"
+  "YourLastname": "Ваша фамилия",
+  "errorOccurredProfileData": "Произошла ошибка при загрузке данных профиля.",
+  "tryRefreshPage": "Попробуйте обновить страницу",
+  "YourAge": "Ваш возраст",
+  "YourCity": "Ваш город",
+  "YourCountry": "Ваша страна",
+  "YourCurrency": "Ваша валюта",
+  "YourUsername": "Ваш логин",
+  "profile.EnterTheUserName": "Введите имя пользователя",
+  "profile.EnterTheCity": "Введите город",
+  "profile.EnterTheLinkToTheAvatar": "Введите ссылку на аватар"
 }

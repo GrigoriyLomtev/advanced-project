@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import {
   ChangeEvent, InputHTMLAttributes, memo,
   useEffect,
@@ -7,18 +7,26 @@ import {
 import styles from './Input.module.scss';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>,
-  'onChange' | 'value' >
+  'onChange' | 'value' | 'readOnly' >
 
 interface InputProps extends HTMLInputProps {
   className?: string
-  value?: string
+  value?: string | number
   onChange?: (value: string) => void
   autofocus?: boolean
+  readonly?: boolean
 }
 
 export const Input = memo((props: InputProps) => {
   const {
-    className, value, onChange, type = 'text', placeholder, autofocus, ...otherProps
+    className,
+    value,
+    onChange,
+    type = 'text',
+    placeholder,
+    autofocus,
+    readonly,
+    ...otherProps
   } = props;
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -32,8 +40,12 @@ export const Input = memo((props: InputProps) => {
     }
   }, [autofocus]);
 
+  const mods: Mods = {
+    [styles.readonly]: readonly,
+  };
+
   return (
-    <div className={classNames(styles.block, {}, [className])}>
+    <div className={classNames(styles.block, mods, [className])}>
       <input
         ref={inputRef}
         className={styles.input}
@@ -41,6 +53,7 @@ export const Input = memo((props: InputProps) => {
         value={value}
         onChange={onChangeHandler}
         placeholder={placeholder}
+        readOnly={readonly}
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...otherProps}
       />

@@ -1,6 +1,15 @@
 {
   "Profile": "Profile",
-  "Edit": "Edit",
   "YourFirstname": "Your first name",
-  "YourLastname": "Your last name"
+  "YourLastname": "Your last name",
+  "tryRefreshPage": "Try refreshing the page",
+  "errorOccurredProfileData": "An error occurred while uploading profile data",
+  "YourAge": "Your age",
+  "YourCity": "Your city",
+  "YourCountry": "Your country",
+  "YourCurrency": "Your currency",
+  "YourUsername": "Your username",
+  "profile.EnterTheUserName": "Enter the user name",
+  "profile.EnterTheCity": "Enter the city",
+  "profile.EnterTheLinkToTheAvatar": "Enter the link to the avatar"
 }

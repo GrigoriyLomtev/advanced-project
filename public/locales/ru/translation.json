@@ -19,5 +19,10 @@
   "authForm": "Форма авторизации",
   "invalidUserAuth": "Неверное имя пользователя или пароль",
   "logout": "Выйти",
-  "ProfilePage": "Страница профиля"
+  "ProfilePage": "Страница профиля",
+  "Cancel": "Отмена",
+  "Edit": "Редактировать",
+  "Save": "Сохранить",
+  "SpecifyTheCurrency": "Укажите валюту",
+  "SpecifyTheCountry": "Укажите страну"
 }

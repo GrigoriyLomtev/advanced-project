@@ -19,5 +19,10 @@
   "authForm": "Auth form",
   "invalidUserAuth": "Invalid username or password",
   "logout": "Log out",
-  "ProfilePage": "Profile page"
+  "ProfilePage": "Profile page",
+  "Cancel": "Cancel",
+  "Edit": "Edit",
+  "Save": "Save",
+  "SpecifyTheCurrency": "Specify the currency",
+  "SpecifyTheCountry": "Specify the country"
 }
