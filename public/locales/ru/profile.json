@@ -9,7 +9,12 @@
   "YourCountry": "Ваша страна",
   "YourCurrency": "Ваша валюта",
   "YourUsername": "Ваш логин",
-  "profile.EnterTheUserName": "Введите имя пользователя",
-  "profile.EnterTheCity": "Введите город",
-  "profile.EnterTheLinkToTheAvatar": "Введите ссылку на аватар"
+  "EnterTheUserName": "Введите имя пользователя",
+  "EnterTheCity": "Введите город",
+  "EnterTheLinkToTheAvatar": "Введите ссылку на аватар",
+  "The data is not specified": "Данные не указаны",
+  "First and last name are required": "Необходимо указать имя и фамилию",
+  "The country is specified incorrectly": "Страна указана неверно",
+  "The age is incorrect": "Возраст указан неверно",
+  "Server error": "Ошибка сервера"
 }

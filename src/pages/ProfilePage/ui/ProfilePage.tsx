@@ -3,12 +3,14 @@ import { useTranslation } from 'react-i18next';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
   ProfileCard,
+  ValidateProfileErrors,
   fetchProfileData,
   getProfileData,
   getProfileError,
   getProfileForm,
   getProfileIsLoading,
   getProfileReadonly,
+  getProfileValidateErrors,
   profileActions,
   profileReducer,
 } from 'entities/Profile';
@@ -17,6 +19,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { Text, TextVariant } from 'shared/ui/Text/Text';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -33,10 +36,18 @@ const ProfilePage = (props: ProfilePageProps) => {
   const dispatch = useAppDispatch();
 
   const formData = useSelector(getProfileForm);
-  // const data = useSelector(getProfileData);
   const error = useSelector(getProfileError);
   const isLoading = useSelector(getProfileIsLoading);
   const readonly = useSelector(getProfileReadonly);
+  const validateErrors = useSelector(getProfileValidateErrors);
+
+  const validateErrorTranslates = {
+    [ValidateProfileErrors.SERVER_ERROR]: t('Server error'),
+    [ValidateProfileErrors.INCORRECT_AGE]: t('The age is incorrect'),
+    [ValidateProfileErrors.INCORRECT_COUNTRY]: t('The country is specified incorrectly'),
+    [ValidateProfileErrors.INCORRECT_USER_DATA]: t('First and last name are required'),
+    [ValidateProfileErrors.NO_DATA]: t('The data is not specified'),
+  };
 
   useEffect(() => {
     dispatch(fetchProfileData());
@@ -51,8 +62,9 @@ const ProfilePage = (props: ProfilePageProps) => {
   }, [dispatch]);
 
   const onChangeAge = useCallback((value?: string) => {
+    const validateValue = value?.replace(/\D+/gm, '');
     dispatch(profileActions.updateProfile({
-      age: Number(value || 0),
+      age: Number(validateValue || 0),
     }));
   }, [dispatch]);
 
@@ -80,6 +92,13 @@ const ProfilePage = (props: ProfilePageProps) => {
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div className={classNames('', {}, [className])}>
         <ProfilePageHeader />
+        {validateErrors?.length && validateErrors.map((err) => (
+          <Text
+            key={err}
+            variant={TextVariant.ERROR}
+            text={validateErrorTranslates[err]}
+          />
+        ))}
         <ProfileCard
           onChangeFirstname={onChangeFirstname}
           onChangeLastname={onChangeLastname}

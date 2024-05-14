@@ -9,7 +9,12 @@
   "YourCountry": "Your country",
   "YourCurrency": "Your currency",
   "YourUsername": "Your username",
-  "profile.EnterTheUserName": "Enter the user name",
-  "profile.EnterTheCity": "Enter the city",
-  "profile.EnterTheLinkToTheAvatar": "Enter the link to the avatar"
+  "EnterTheUserName": "Enter the user name",
+  "EnterTheCity": "Enter the city",
+  "EnterTheLinkToTheAvatar": "Enter the link to the avatar",
+  "The data is not specified": "The data is not specified",
+  "First and last name are required": "First and last name are required",
+  "The country is specified incorrectly": "The country is specified incorrectly",
+  "The age is incorrect": "The age is incorrect",
+  "Server error": "Server error"
 }

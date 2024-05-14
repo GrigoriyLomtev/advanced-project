@@ -99,6 +99,13 @@ export const ProfileCard = (props: ProfileCardProps) => {
         />
         <Input
           readonly={readonly}
+          onChange={onChangeCity}
+          className={styles.input}
+          value={data?.city}
+          placeholder={t('YourCity')}
+        />
+        <Input
+          readonly={readonly}
           onChange={onChangeUsername}
           className={styles.input}
           value={data?.username}
