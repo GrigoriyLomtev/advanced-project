@@ -8,6 +8,7 @@ export function buildPlugins({
   paths,
   isDev,
   apiUrl,
+  project,
   analyze,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
   return [
@@ -22,6 +23,7 @@ export function buildPlugins({
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
       __API__: JSON.stringify(apiUrl),
+      __PROJECT__: JSON.stringify(project),
     }),
     new webpack.HotModuleReplacementPlugin(),
     new BundleAnalyzerPlugin({

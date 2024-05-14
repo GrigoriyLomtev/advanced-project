@@ -2,6 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import ThemeDecorator from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import StoreDecorator from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import avatarImg from 'shared/assets/tests/storybook.png';
+import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
 import ProfilePage from './ProfilePage';
 
 const meta = {
@@ -13,7 +16,20 @@ const meta = {
   argTypes: {},
   args: {},
   decorators: [
-    StoreDecorator({ }),
+    StoreDecorator({
+      profile: {
+        form: {
+          age: 25,
+          city: 'SPB',
+          country: Country.RUSSIA,
+          currency: Currency.RUB,
+          first: 'Gri',
+          lastname: 'Sha',
+          username: 'admin',
+          avatar: avatarImg,
+        },
+      },
+    }),
   ],
 } satisfies Meta<typeof ProfilePage>;
 

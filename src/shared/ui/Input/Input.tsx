@@ -46,13 +46,15 @@ export const Input = memo((props: InputProps) => {
 
   return (
     <div className={classNames(styles.block, mods, [className])}>
+      {placeholder
+      && <div className={styles.placeholder}>{placeholder}</div>}
       <input
         ref={inputRef}
         className={styles.input}
         type={type}
         value={value}
         onChange={onChangeHandler}
-        placeholder={placeholder}
+        // placeholder={placeholder}
         readOnly={readonly}
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...otherProps}
