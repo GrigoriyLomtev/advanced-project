@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import avatarImg from 'shared/assets/tests/storybook.png';
+// import avatarImg from 'shared/assets/tests/storybook.png';
 import { ProfileCard } from './ProfileCard';
 
 const meta = {
@@ -27,7 +27,7 @@ export const Primary: Story = {
       first: 'Gri',
       lastname: 'Sha',
       username: 'admin',
-      avatar: avatarImg,
+      avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1KGy5n12lCTVO5HokLys3Q_5PoWKz2zvDxQQn8u3gXw&s',
     },
   },
 };
