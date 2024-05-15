@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BuildOptions } from './types/config';
 
 export function buildPlugins({
@@ -29,5 +30,6 @@ export function buildPlugins({
     new BundleAnalyzerPlugin({
       analyzerMode: analyze ? 'server' : 'disabled',
     }),
-  ];
+    isDev && new ReactRefreshWebpackPlugin(),
+  ].filter(Boolean) as webpack.WebpackPluginInstance[];
 }
