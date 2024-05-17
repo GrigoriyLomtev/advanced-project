@@ -5,6 +5,7 @@
   "navBar": {
     "toMainPage": "Главная страница",
     "toProfilePage": "Профиль",
+    "toArticlesPage": "Статьи",
     "toAboutPage": "О нас"
   },
   "PageNotFound": "Страница не найдена",

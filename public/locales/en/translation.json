@@ -5,6 +5,7 @@
   "navBar": {
     "toMainPage": "Main Page",
     "toProfilePage": "Profile",
+    "toArticlesPage": "Articles",
     "toAboutPage": "About us"
   },
   "PageNotFound": "Page Not Found",
