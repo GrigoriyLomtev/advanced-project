@@ -1,4 +1,5 @@
 {
   "ArticleNotFound": "Article not found",
-  "article-details.an error occurred while uploading the article": "An error occurred while uploading the article"
+  "an error occurred while uploading the article": "An error occurred while uploading the article",
+  "Comments": "Comments"
 }
