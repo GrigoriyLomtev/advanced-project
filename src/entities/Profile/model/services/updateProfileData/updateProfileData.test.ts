@@ -12,6 +12,7 @@ const data = {
   first: 'Gri',
   lastname: 'Sha',
   username: 'admin',
+  id: '1',
 };
 
 describe('updateProfileData.test', () => {

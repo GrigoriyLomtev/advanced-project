@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,30 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "wqe",
+      "id": "87KfxwQ"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "qweasdqwe",
+      "id": "b8hfEvL"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "qwezxcasdzxc",
+      "id": "7JleFEn"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "test",
+      "id": "0radjZv"
     }
   ],
   "users": [
@@ -118,14 +144,28 @@
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcc1SmXN3Ares8s4teWGd6efZoz6dlTwEOSA&s"
     }
   ],
-  "profile": {
-    "first": "Gri",
-    "lastname": "Shaa",
-    "age": 333,
-    "currency": "EUR",
-    "country": "France",
-    "city": "Spb",
-    "username": "admin",
-    "avatar": "https://nztcdn.com/avatar/l/1658534106/2176856.webp"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "GriG",
+      "lastname": "Shaa",
+      "age": 333,
+      "currency": "EUR",
+      "country": "France",
+      "city": "Spb",
+      "username": "admin123",
+      "avatar": "https://nztcdn.com/avatar/l/1658534106/2176856.webp"
+    },
+    {
+      "id": "2",
+      "first": "Gri",
+      "lastname": "Shaa",
+      "age": 333,
+      "currency": "EUR",
+      "country": "France",
+      "city": "Paris",
+      "username": "user profile",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcc1SmXN3Ares8s4teWGd6efZoz6dlTwEOSA&s"
+    }
+  ]
 }

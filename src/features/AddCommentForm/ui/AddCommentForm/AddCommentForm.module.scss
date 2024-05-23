@@ -1,0 +1,13 @@
+.block {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--primary-color);
+  align-items: center;
+}
+
+.input {
+  flex-grow: 1;
+  margin-right: 20px;
+}
