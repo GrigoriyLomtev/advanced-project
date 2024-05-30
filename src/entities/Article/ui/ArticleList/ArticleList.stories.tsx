@@ -1,12 +1,6 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
-import { Article, ArticleList, ArticleView } from 'entities/Article';
-import styles from './ArticlesPage.module.scss';
-
-interface ArticlesPageProps {
-  className?:string
-}
+import type { Meta, StoryObj } from '@storybook/react';
+import { Article, ArticleView } from '../../model/types/article';
+import { ArticleList } from './ArticleList';
 
 const article = {
   id: '1',
@@ -90,22 +84,49 @@ const article = {
   ],
 } as Article;
 
-const ArticlesPage = (props: ArticlesPageProps) => {
-  const { className } = props;
-  const { t } = useTranslation();
+const meta = {
+  title: 'entities/Article/ArticleList',
+  component: ArticleList,
+  parameters: {},
+  tags: ['autodocs'],
+  argTypes: {},
+  args: { articles: [] },
+} satisfies Meta<typeof ArticleList>;
 
-  return (
-    <div className={classNames(styles.block, {}, [className])}>
-      <ArticleList
-        isLoading
-        view={ArticleView.LIST}
-        articles={new Array(16).fill(0).map((item, index) => ({
-          ...article,
-          id: String(index),
-        }))}
-      />
-    </div>
-  );
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const NormalGrid: Story = {
+  args: {
+    articles:
+      new Array(9).fill(0).map((item, index) => ({
+        ...article,
+        id: String(index),
+      })),
+  },
+
 };
 
-export default memo(ArticlesPage);
+export const NormalList: Story = {
+  args: {
+    view: ArticleView.LIST,
+    articles:
+      new Array(3).fill(0).map((item, index) => ({
+        ...article,
+        id: String(index),
+      })),
+  },
+};
+
+export const LoadingGrid: Story = {
+  args: { isLoading: true, view: ArticleView.GRID },
+};
+export const LoadingList: Story = {
+  args: { isLoading: true, view: ArticleView.LIST },
+};
+
+export const Error: Story = {
+  args: { },
+  decorators: [],
+};

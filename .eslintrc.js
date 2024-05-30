@@ -61,7 +61,7 @@ module.exports = {
         namedComponents: 'arrow-function',
       },
     ],
-
+    'react/no-array-index-key': 'off',
   },
   globals: {
     __IS_DEV__: true,
