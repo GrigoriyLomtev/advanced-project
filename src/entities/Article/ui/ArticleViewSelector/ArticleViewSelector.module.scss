@@ -1,0 +1,9 @@
+.block {
+  stroke: var(--primary-color);
+}
+
+.notSelected {
+  fill: var(--secondary-color);
+  stroke: var(--secondary-color);
+  opacity: 0.8;
+}
