@@ -10,7 +10,7 @@ import { Page } from 'shared/ui/Page/Page';
 import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {
-  getArticlesPageError, getArticlesPageHasMore, getArticlesPageIsLoading, getArticlesPageNumber, getArticlesPageView,
+  getArticlesPageError, getArticlesPageIsLoading, getArticlesPageView,
 } from '../../model/selectors/articlePageSelectors';
 import { articlesPageActions, articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice';
 import styles from './ArticlesPage.module.scss';
@@ -58,7 +58,6 @@ const ArticlesPage = (props: ArticlesPageProps) => {
         <ArticleList
           isLoading={isLoading}
           view={view}
-          // view={ArticleView.LIST}
           articles={articles}
         />
       </Page>
