@@ -1,6 +1,6 @@
 // import styles from "./AboutPage.module.scss";
 import { useTranslation } from 'react-i18next';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 
 interface IAboutPage {}
 
