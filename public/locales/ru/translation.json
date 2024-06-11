@@ -29,5 +29,18 @@
   "Profile": "Профиль",
   "There are no comments": "Нет комментариев",
   "Enter the comment text": "Введите текст комментария",
-  "Send": "Отправить"
+  "Send": "Отправить",
+  "search": "поиск",
+  "Sort": "Сортировать",
+  "by": "по",
+  "ascending": "возрастанию",
+  "descending": "убыванию",
+  "creation date": "дате создания",
+  "title": "заголовку",
+  "views": "просмотрам",
+  "IT": "Айти",
+  "ECONOMICS": "Экономика",
+  "SCIENCE": "Наука",
+  "All articles": "Все статьи",
+  "Articles not found": "Статьи не найдены"
 }
