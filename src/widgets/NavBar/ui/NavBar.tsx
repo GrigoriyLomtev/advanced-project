@@ -5,6 +5,9 @@ import { memo, useCallback, useState } from 'react';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
+import { Text, TextVariant } from 'shared/ui/Text/Text';
+import { AppLink, AppLinkVariant } from 'shared/ui/AppLink/AppLink';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import styles from './NavBar.module.scss';
 
 interface NavBarProps {
@@ -34,6 +37,18 @@ export const NavBar = memo((props: NavBarProps) => {
   if (authData) {
     return (
       <header className={classNames(styles.block, {}, [className])}>
+        <Text
+          variant={TextVariant.INVERTED}
+          title="Gri Blog App"
+          className={styles.appName}
+        />
+        <AppLink
+          variant={AppLinkVariant.INVERTED}
+          to={RoutePath.article_create}
+          className={styles.createBtn}
+        >
+          {t('Create new article')}
+        </AppLink>
         <Button
           variant={ButtonVariant.CLEAR_INVERTED}
           className={styles.navLinks}
