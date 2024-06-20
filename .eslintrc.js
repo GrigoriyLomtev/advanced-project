@@ -18,6 +18,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'react-hooks',
+    'path-checker-gri',
   ],
   rules: {
     'react/jsx-indent': [1, 2],
@@ -62,6 +63,7 @@ module.exports = {
       },
     ],
     'react/no-array-index-key': 'off',
+    'path-checker-gri/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,
