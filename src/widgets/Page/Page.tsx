@@ -54,7 +54,7 @@ export const Page = (props: PageProps) => {
   }, 300);
 
   return (
-    <section
+    <main
       ref={wrapperRef}
       className={classNames(styles.block, {}, [className])}
       onScroll={onScroll}
@@ -62,6 +62,6 @@ export const Page = (props: PageProps) => {
     >
       {children}
       {onScrollEnd ? <div className={styles.trigger} ref={triggerRef} /> : null}
-    </section>
+    </main>
   );
 };

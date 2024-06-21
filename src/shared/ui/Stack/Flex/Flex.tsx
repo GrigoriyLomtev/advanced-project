@@ -1,5 +1,5 @@
 import { Mods, classNames } from 'shared/lib/classNames/classNames';
-import { ElementType, ReactNode } from 'react';
+import { ElementType, HTMLAttributes, ReactNode } from 'react';
 import styles from './Flex.module.scss';
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between'
@@ -29,7 +29,7 @@ const gapClasses: Record<FlexGap, string> = {
   32: styles.gap32,
 };
 
-export interface FlexProps {
+export interface FlexProps extends HTMLAttributes<HTMLElement> {
   className?: string
   children: ReactNode
   justify?: FlexJustify
@@ -65,11 +65,13 @@ export const Flex = (props: FlexProps) => {
   };
 
   return (
-    <ComponentWrapper className={classNames(
-      styles.block,
-      mods,
-      classes,
-    )}
+    <ComponentWrapper
+      className={classNames(
+        styles.block,
+        mods,
+        classes,
+      )}
+      {...props}
     >
       {children}
     </ComponentWrapper>
