@@ -1,5 +1,5 @@
 import { Mods, classNames } from 'shared/lib/classNames/classNames';
-import { ReactNode } from 'react';
+import { ElementType, ReactNode } from 'react';
 import styles from './Flex.module.scss';
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between'
@@ -37,6 +37,7 @@ export interface FlexProps {
   direction: FlexDirection
   gap?: FlexGap
   max?: boolean
+  component?: ElementType
 }
 
 export const Flex = (props: FlexProps) => {
@@ -48,6 +49,7 @@ export const Flex = (props: FlexProps) => {
     direction = 'row',
     gap,
     max,
+    component: ComponentWrapper = 'div',
   } = props;
 
   const classes = [
@@ -63,13 +65,13 @@ export const Flex = (props: FlexProps) => {
   };
 
   return (
-    <div className={classNames(
+    <ComponentWrapper className={classNames(
       styles.block,
       mods,
       classes,
     )}
     >
       {children}
-    </div>
+    </ComponentWrapper>
   );
 };
