@@ -38,7 +38,7 @@ module.exports = {
 
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
-    'react/jsx-props-no-spreading': 'warn',
+    'react/jsx-props-no-spreading': 'off',
     'linebreak-style': 'off',
     'no-console': 'off',
     'no-shadow': 'off',
@@ -47,7 +47,10 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'i18next/no-literal-string': [
       'warn',
-      { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'fill', 'target'] },
+      {
+        markupOnly: true,
+        ignoreAttribute: ['align', 'justify', 'direction', 'data-testid', 'to', 'fill', 'target'],
+      },
     ],
     'max-len': ['error', { code: 130, ignoreComments: true }],
     'jsx-a11y/no-static-element-interactions': 'off',
