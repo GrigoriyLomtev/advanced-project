@@ -50,6 +50,7 @@ export const Flex = (props: FlexProps) => {
     gap,
     max,
     component: ComponentWrapper = 'div',
+    ...otherProps
   } = props;
 
   const classes = [
@@ -71,7 +72,7 @@ export const Flex = (props: FlexProps) => {
         mods,
         classes,
       )}
-      {...props}
+      {...otherProps}
     >
       {children}
     </ComponentWrapper>
