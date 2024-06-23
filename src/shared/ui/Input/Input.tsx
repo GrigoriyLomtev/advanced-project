@@ -54,9 +54,7 @@ export const Input = memo((props: InputProps) => {
         type={type}
         value={value}
         onChange={onChangeHandler}
-        // placeholder={placeholder}
         readOnly={readonly}
-        // eslint-disable-next-line react/jsx-props-no-spreading
         {...otherProps}
       />
     </div>
