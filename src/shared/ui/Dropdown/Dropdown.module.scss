@@ -1,0 +1,58 @@
+.block {
+  position: relative;
+}
+
+.btn {
+  background: none;
+  border: none;
+  outline-color: transparent;
+  padding: 0;
+  margin: 0;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.menu {
+  background: var(--card-bg);
+  position: absolute;
+  z-index: 10000;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  flex-direction: column;
+  display: flex;
+}
+
+.item {
+  padding: 10px 25px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: none;
+  outline-color: transparent;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.active {
+  background: var(--inverted-primary-color);
+}
+
+.optionsTopLeft {
+  bottom: 100%;
+  right: 0;
+}
+
+.optionsTopRight {
+  bottom: 100%;
+  left: 0;
+}
+
+.optionsBottomLeft {
+  top: 100%;
+  right: 0;
+}
+
+.optionsBottomRight {
+  top: 100%;
+  left: 0;
+}

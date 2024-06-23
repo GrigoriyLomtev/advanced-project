@@ -8,6 +8,8 @@ import { getUserAuthData, userActions } from 'entities/User';
 import { Text, TextVariant } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkVariant } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 import styles from './NavBar.module.scss';
 
 interface NavBarProps {
@@ -49,13 +51,28 @@ export const NavBar = memo((props: NavBarProps) => {
         >
           {t('Create new article')}
         </AppLink>
-        <Button
+        <Dropdown
+          items={[
+            {
+              content: t('Profile'),
+              href: RoutePath.profile + authData.id,
+            },
+            {
+              content: t('logout'),
+              onClick: onLogout,
+            },
+          ]}
+          trigger={<Avatar size={30} src={authData.avatar} />}
+          className={styles.dropdown}
+          direction="bottom left"
+        />
+        {/* <Button
           variant={ButtonVariant.CLEAR_INVERTED}
           className={styles.navLinks}
           onClick={onLogout}
         >
           {t('logout')}
-        </Button>
+        </Button> */}
       </header>
     );
   }
