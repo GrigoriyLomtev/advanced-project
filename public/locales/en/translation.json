@@ -45,5 +45,7 @@
   "Back to the list": "Back to the list",
   "Articles not found": "Articles not found",
   "Edit article with ID = ": "Edit article with ID = ",
-  "Create new article": "Create article"
+  "Create new article": "Create article",
+  "We recommend it": "We recommend it",
+  "error loading articles": "Error loading articles"
 }

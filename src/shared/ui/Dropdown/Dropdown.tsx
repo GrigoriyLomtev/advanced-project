@@ -40,7 +40,7 @@ export const Dropdown = (props: DropdownProps) => {
     >
       <Menu.Button className={styles.btn}>{trigger}</Menu.Button>
       <Menu.Items className={classNames(styles.menu, {}, menuClasses)}>
-        {items.map((item) => {
+        {items.map((item, index) => {
           const content = ({ active }: { active: boolean }) => (
             <button
               type="button"

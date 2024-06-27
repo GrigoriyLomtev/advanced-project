@@ -15,5 +15,6 @@
   "First and last name are required": "First and last name are required",
   "The country is specified incorrectly": "The country is specified incorrectly",
   "The age is incorrect": "The age is incorrect",
-  "Server error": "Server error"
+  "Server error": "Server error",
+  "profile.Profile not found": "Profile not found"
 }

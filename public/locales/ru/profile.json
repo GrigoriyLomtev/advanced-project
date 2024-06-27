@@ -15,5 +15,6 @@
   "First and last name are required": "Необходимо указать имя и фамилию",
   "The country is specified incorrectly": "Страна указана неверно",
   "The age is incorrect": "Возраст указан неверно",
-  "Server error": "Ошибка сервера"
+  "Server error": "Ошибка сервера",
+  "profile.Profile not found": "Профиль не найден"
 }

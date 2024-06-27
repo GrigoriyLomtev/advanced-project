@@ -45,5 +45,7 @@
   "Back to the list": "Вернуться к списку",
   "Articles not found": "Статьи не найдены",
   "Edit article with ID = ": "Редактировать статью с ID = ",
-  "Create new article": "Создать статью"
+  "Create new article": "Создать статью",
+  "We recommend it": "Мы рекомендуем",
+  "error loading articles": "Ошибка при загрузке статей"
 }

@@ -3,19 +3,20 @@ import { useTranslation } from 'react-i18next';
 import { Button, ButtonVariant } from 'shared/ui/Button/Button';
 import { Text } from 'shared/ui/Text/Text';
 import { useSelector } from 'react-redux';
-import {
-  getProfileData, getProfileReadonly, profileActions, updateProfileData,
-} from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useCallback } from 'react';
 import { getUserAuthData } from 'entities/User';
 import { HStack } from 'shared/ui/Stack';
+import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
+import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
+import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
+import { profileActions } from '../../model/slice/profileSlice';
 
-interface ProfilePageHeaderProps {
+interface EditableProfileCardHeaderProps {
   className?:string
 }
 
-export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
+export const EditableProfileCardHeader = (props: EditableProfileCardHeaderProps) => {
   const { className } = props;
   const { t } = useTranslation();
   const dispatch = useAppDispatch();

@@ -4,20 +4,22 @@ import {
 import { AxiosInstance } from 'axios';
 import { ArticleDetailsSchema } from 'entities/Article';
 import { CounterSchema } from 'entities/Counter';
-import { ProfileSchema } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
 import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { LoginSchema } from 'features/AuthByUsername';
 import { ScrollRestorationSchema } from 'features/ScrollRestoration';
+import { ProfileSchema } from 'features/editableProfileCard';
 import {
   ArticleDetailsPageSchema,
 } from 'pages/ArticleDetailsPage';
 import { ArticlePageSchema } from 'pages/ArticlesPage';
+import { rtkApi } from 'shared/api/rtkApi';
 
 export interface StateSchema {
   counter: CounterSchema;
   user: UserSchema;
   scrollRestoration: ScrollRestorationSchema;
+  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
   // async reducers
   loginForm?: LoginSchema;
@@ -25,7 +27,7 @@ export interface StateSchema {
   addCommentForm?: AddCommentFormSchema;
   articlesPage?: ArticlePageSchema;
   articleDetails?: ArticleDetailsSchema;
-  articleDetailsPage?: ArticleDetailsPageSchema
+  articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema

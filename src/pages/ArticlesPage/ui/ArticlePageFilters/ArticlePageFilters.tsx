@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback, useMemo } from 'react';
+import { memo, useCallback } from 'react';
 import {
   ArticleSortField, ArticleSortSelector, ArticleTypeTabs, ArticleView, ArticleViewSelector,
 } from 'entities/Article';
@@ -10,7 +10,6 @@ import { Card } from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
-import { TabItem, Tabs } from 'shared/ui/Tabs/Tabs';
 import { ArticleType } from 'entities/Article/model/types/article';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import styles from './ArticlePageFilters.module.scss';
@@ -70,25 +69,6 @@ export const ArticlePageFilters = memo((props: ArticlePageFiltersProps) => {
     dispatch(articlesPageActions.setPage(1));
     fetchData();
   }, [dispatch, fetchData]);
-
-  const typeTabs = useMemo<TabItem[]>(() => [
-    {
-      value: ArticleType.ALL,
-      content: t('All articles'),
-    },
-    {
-      value: ArticleType.IT,
-      content: t('IT'),
-    },
-    {
-      value: ArticleType.ECONOMICS,
-      content: t('ECONOMICS'),
-    },
-    {
-      value: ArticleType.SCIENCE,
-      content: t('SCIENCE'),
-    },
-  ], [t]);
 
   return (
     <div className={classNames(styles.block, {}, [className])}>
