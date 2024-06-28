@@ -47,5 +47,7 @@
   "Edit article with ID = ": "Edit article with ID = ",
   "Create new article": "Create article",
   "We recommend it": "We recommend it",
-  "error loading articles": "Error loading articles"
+  "error loading articles": "Error loading articles",
+  "Admin board": "Admin board",
+  "ForbiddenPage": "Forbidden Page"
 }

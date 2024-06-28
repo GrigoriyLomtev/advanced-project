@@ -47,5 +47,7 @@
   "Edit article with ID = ": "Редактировать статью с ID = ",
   "Create new article": "Создать статью",
   "We recommend it": "Мы рекомендуем",
-  "error loading articles": "Ошибка при загрузке статей"
+  "error loading articles": "Ошибка при загрузке статей",
+  "Admin board": "Админ панель",
+  "ForbiddenPage": "Страница недоступна"
 }
