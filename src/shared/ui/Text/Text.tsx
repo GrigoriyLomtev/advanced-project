@@ -27,11 +27,19 @@ interface TextProps {
   variant?: TextVariant
   align?: TextAlign
   size?: TextSize
+
+  'data-testid'?: string
 }
 
 export const Text = memo((props: TextProps) => {
   const {
-    className, text, title, variant = TextVariant.PRIMARY, align = TextAlign.LEFT, size = TextSize.M,
+    className,
+    text,
+    title,
+    variant = TextVariant.PRIMARY,
+    align = TextAlign.LEFT,
+    size = TextSize.M,
+    'data-testid': dataTestId = 'Text',
   } = props;
   const { t } = useTranslation();
 
@@ -43,8 +51,22 @@ export const Text = memo((props: TextProps) => {
       styles[size],
     ])}
     >
-      {title && <p className={styles.title}>{title}</p>}
-      {text && <p className={styles.text}>{text}</p>}
+      {title && (
+        <p
+          data-testid={`${dataTestId}.Title`}
+          className={styles.title}
+        >
+          {title}
+        </p>
+      )}
+      {text && (
+        <p
+          data-testid={`${dataTestId}.Paragraph`}
+          className={styles.text}
+        >
+          {text}
+        </p>
+      )}
     </div>
   );
 });

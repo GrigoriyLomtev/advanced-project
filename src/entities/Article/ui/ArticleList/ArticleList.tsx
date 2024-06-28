@@ -17,6 +17,7 @@ interface ArticleListProps {
   isLoading?: boolean
   view?: ArticleView
   target?: HTMLAttributeAnchorTarget
+  virtualized?: boolean
 }
 
 const getSkeletons = (view:ArticleView) => new Array(view === ArticleView.GRID ? 9 : 3)
@@ -36,6 +37,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     view = ArticleView.GRID,
     isLoading,
     target,
+    virtualized = true,
   } = props;
   const { t } = useTranslation();
 
@@ -94,28 +96,33 @@ export const ArticleList = memo((props: ArticleListProps) => {
           ref={registerChild}
           className={classNames(styles.block, {}, [className, styles[view]])}
         >
-          <List
-            height={height ?? 700}
-            rowCount={rowCount}
-            rowHeight={isList ? 700 : 330}
-            // eslint-disable-next-line i18next/no-literal-string, react/no-unstable-nested-components
-            rowRenderer={rowRender}
-            width={width ? width - 80 : 700}
-            autoHeight
-            scrollTop={scrollTop}
-            onScroll={onChildScroll}
-            isScrolling={isScrolling}
-          />
+          {virtualized
+            ? (
+              <List
+                height={height ?? 700}
+                rowCount={rowCount}
+                rowHeight={isList ? 700 : 330}
+                rowRenderer={rowRender}
+                width={width ? width - 80 : 700}
+                autoHeight
+                scrollTop={scrollTop}
+                onScroll={onChildScroll}
+                isScrolling={isScrolling}
+              />
+            )
+            : articles.map((item) => (
+              <ArticleListItem
+                target={target}
+                article={item}
+                view={view}
+                key={item.id}
+                className={styles.card}
+              />
+            ))}
+
           {isLoading && getSkeletons(view)}
         </div>
       )}
     </WindowScroller>
-
-  // <div className={classNames(styles.block, {}, [className, styles[view]])}>
-  //   {articles.length > 0
-  //     ? articles.map(renderArticle)
-  //     : null}
-  //   {isLoading && getSkeletons(view)}
-  // </div>
   );
 });
