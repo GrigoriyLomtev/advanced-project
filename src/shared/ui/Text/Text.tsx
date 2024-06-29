@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import styles from './Text.module.scss';
 
@@ -41,7 +40,6 @@ export const Text = memo((props: TextProps) => {
     size = TextSize.M,
     'data-testid': dataTestId = 'Text',
   } = props;
-  const { t } = useTranslation();
 
   return (
     <div className={classNames(styles.block, {}, [

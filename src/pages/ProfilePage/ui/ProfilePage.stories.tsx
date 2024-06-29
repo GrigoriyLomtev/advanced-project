@@ -8,7 +8,7 @@ import { Currency } from 'entities/Currency';
 import ProfilePage from './ProfilePage';
 
 const meta = {
-  title: 'pages/ProfilePage',
+  title: 'pages/ProfilePage/ProfilePage',
   component: ProfilePage,
   parameters: {
   },

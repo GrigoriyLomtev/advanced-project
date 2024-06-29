@@ -5,7 +5,7 @@ import StoreDecorator from 'shared/config/storybook/StoreDecorator/StoreDecorato
 import MainPage from './MainPage';
 
 const meta = {
-  title: 'pages/MainPage',
+  title: 'pages/MainPage/MainPage',
   component: MainPage,
   parameters: {
   },
